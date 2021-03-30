@@ -1,0 +1,19 @@
+{
+  "name": "bowlingscoresite",
+  "version": "1.0.0",
+  "description": "a web site to track bowling scores",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab",
+    "start": "node index.js"
+  },
+  "author": "Lee Gordon",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.0"
+  },
+  "devDependencies": {
+    "@hapi/code": "^8.0.3",
+    "@hapi/lab": "^24.1.1"
+  }
+}
