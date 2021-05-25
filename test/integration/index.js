@@ -20,5 +20,19 @@ lab.experiment('web test', () => {
     }
     const response = await server.inject(options)
     Code.expect(response.statusCode).to.equal(200)
+    console.log({ response })
+    Code.expect(response.result).to.contain('Bowling Calculator')
+  })
+
+  lab.test('post / route works', async () => {
+    const options = {
+      method: 'POST',
+      payload: '{}',
+      url: '/'
+    }
+    const response = await server.inject(options)
+    Code.expect(response.statusCode).to.equal(200)
+    console.log({ response })
+    Code.expect(response.result).to.contain('20')
   })
 })

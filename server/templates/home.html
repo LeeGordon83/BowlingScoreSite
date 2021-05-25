@@ -1,0 +1,25 @@
+<h1>Bowling Calculator</h1>
+
+<p>Hello {{name}}</p>
+
+<form action="/" method="POST">
+    <table style="width:60%; border:solid">
+        <tr>
+    {{#each frames}}
+            <th colspan="2" for="frame_{{this}}">Frame {{this}}</th>
+    {{/each}}
+        </tr>
+        <tr>
+    {{#each frames}}
+            <td><input type="text" style="width: 80%; text-align: center;" id="frame_{{this}}_ball_1" name="frame_{{this}}_ball_1"></td>
+            <td><input type="text" style="width: 80%; text-align: center;" id="frame_{{this}}_ball_2" name="frame_{{this}}_ball_2"></td>
+    {{/each}}
+        </tr>
+        <tr>
+            {{#each frames}}
+                    <td colspan="2" style="text-align: center;" for="frame_{{this}}_total">0</td>
+            {{/each}}
+        </tr>
+    </table>
+    <input type="submit">
+  </form>
